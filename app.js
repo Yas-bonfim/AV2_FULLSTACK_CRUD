@@ -27,14 +27,12 @@ app.use('/api/protected', protectedRoutes);
 app.use(errorMiddleware);
 
 // Conexão com o MongoDB (versão melhorada)
+// database/mongo.js
+
+
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    });
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('🟢 Conectado ao MongoDB');
   } catch (err) {
     console.error('Erro ao conectar ao MongoDB:', err.message);
@@ -42,6 +40,7 @@ const connectDB = async () => {
   }
 };
 
+module.exports = connectDB;
 connectDB();
 
 // Inicia o servidor localmente (com verificação para Vercel)
