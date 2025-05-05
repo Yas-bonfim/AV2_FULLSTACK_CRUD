@@ -1,6 +1,19 @@
 const Book = require('../models/book');
+const mongoose = require('mongoose');
+
+async function ensureCollectionExists(collectionName) {
+  const collections = await mongoose.connection.db.listCollections().toArray();
+  const exists = collections.some(c => c.name === collectionName);
+  if (!exists) {
+    await mongoose.connection.createCollection(collectionName);
+    console.log(`Coleção '${collectionName}' criada.`);
+  } else {
+    console.log(`Coleção '${collectionName}' já existe.`);
+  }
+}
 
 exports.createBook = async (userId, data) => {
+  await ensureCollectionExists('books');
   return await Book.create({ ...data, userId });
 };
 

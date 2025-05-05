@@ -1,7 +1,9 @@
 const bookService = require('../services/bookService');
+const { ensureCollectionExists } = require('../utils/collectionUtils'); // novo utilitário
 
 exports.create = async (req, res) => {
   try {
+    await ensureCollectionExists('books'); // garante que a coleção existe antes de criar
     const book = await bookService.createBook(req.userId, req.body);
     res.status(201).json(book);
   } catch (err) {
