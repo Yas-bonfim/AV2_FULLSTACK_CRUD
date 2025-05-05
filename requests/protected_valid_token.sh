@@ -1,0 +1,4 @@
+curl -X GET http://localhost:3000/api/auth/protected  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTY4NTFkMTgwNmNmZDM3M2I1ZWM3YiIsImVtYWlsIjoiYW5hQGVtYWlsLmNvbSIsImlhdCI6MTc0NjMwNjM4NiwiZXhwIjoxNzQ2MzA5OTg2fQ.d-vNQYSZtPTnZ75ihc-XMejnr3VIVgmQEiKCpkuqWoI"
+
+curl -X GET https://av-2-full-stack-inky.vercel.app/api/auth/protected \
+ -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTY4NWU2MGNkMTFhNjA0M2NmMWE4NyIsImVtYWlsIjoiYW5hQGVtYWlsLmNvbSIsImlhdCI6MTc0NjMwNjY2MSwiZXhwIjoxNzQ2MzEwMjYxfQ.DNK3YYnbftDfz5MCs9VtkgPOkWOTVO04XyosAvC_sXA"

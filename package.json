@@ -1,0 +1,27 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yas-bonfim/AV2_FULLSTACK_CRUD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yas-bonfim/AV2_FULLSTACK_CRUD/issues"
+  },
+  "homepage": "https://github.com/Yas-bonfim/AV2_FULLSTACK_CRUD#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.1"
+  }
+}
