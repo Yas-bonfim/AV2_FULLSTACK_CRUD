@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Book = require('../models/book');
 
-// Verifica se a coleção existe (opcional em ambientes dev)
+// Verifica se a coleção existe (opcional em dev)
 async function ensureCollectionExists(collectionName) {
   const collections = await mongoose.connection.db.listCollections().toArray();
   const exists = collections.some(c => c.name === collectionName);
@@ -16,11 +16,7 @@ exports.createBook = async (userId, data) => {
   if (!userId) throw new Error('userId não fornecido');
   await ensureCollectionExists('books');
 
-  const bookData = {
-    ...data,
-    userId
-  };
-
+  const bookData = { ...data, userId };
   console.log('[CREATE BOOK] Dados:', bookData);
 
   const newBook = new Book(bookData);
