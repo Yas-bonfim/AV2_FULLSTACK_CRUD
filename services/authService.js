@@ -64,9 +64,9 @@ const login = async ({ email, password }) => {
     if (!user) {
       return { status: 401, data: { message: 'Credenciais inválidas' } };
     }
-    console.log('Senha fornecida para comparação:', password);
+    //console.log('Senha fornecida para comparação:', password);
     const match = await bcrypt.compare(password, user.password);
-    console.log('Resultado da comparação de senha:', match);
+    //console.log('Resultado da comparação de senha:', match);
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return { status: 401, data: { message: 'Credenciais inválidas' } };
