@@ -3,6 +3,6 @@ curl -X POST http://localhost:3000/api/auth/login \
 -d '{"email":"ana@email.com","password":"senhaerrada"}'
 
 
-curl -X POST https://av-2-full-stack-inky.vercel.app/api/auth/login \
+curl -X POST https://av-2-fullstack-crud.vercel.app/api/auth/login \
 -H "Content-Type: application/json" \
 -d '{"email":"ana@email.com","password":"senhaerrada"}'
