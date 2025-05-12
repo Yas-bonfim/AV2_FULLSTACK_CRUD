@@ -2,6 +2,8 @@
 
 Este projeto é uma API RESTful desenvolvida com Node.js, Express e MongoDB, que permite o gerenciamento de uma **lista de livros protegida por autenticação JWT**. Usuários podem se registrar, fazer login e gerenciar seus próprios livros.
 
+Link do video:  https://youtu.be/2OlytVngWt4
+
 ---
 
 ## 🚀 Funcionalidades
