@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
+const cors = require('cors');
 
 // Rotas
 const authRoutes = require('./routes/authRoutes');
@@ -12,7 +13,8 @@ const errorMiddleware = require('./middlewares/errorMiddleware');
 
 dotenv.config();
 
-const app = express();
+const app = express(); 
+app.use(cors());
 
 // Middlewares
 app.use(express.json());
@@ -45,7 +47,7 @@ connectDB();
 
 // Inicia o servidor localmente (com verificação para Vercel)
 if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3001;
   app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando na porta ${PORT}`);
   });
