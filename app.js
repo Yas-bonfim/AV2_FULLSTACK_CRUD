@@ -14,7 +14,10 @@ const errorMiddleware = require('./middlewares/errorMiddleware');
 dotenv.config();
 
 const app = express(); 
-app.use(cors());
+app.use(cors({
+  origin: 'https://fullstacktelalogin.vercel.app',
+  credentials: true
+}));
 
 // Middlewares
 app.use(express.json());
