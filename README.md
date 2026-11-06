@@ -21,7 +21,7 @@ Este projeto é uma API RESTful desenvolvida com Node.js, Express e MongoDB, que
 ---
 
 ## 🧱 Estrutura do Projeto
-
+```
 project/
 │
 ├── controllers/ # Lógica das rotas
@@ -34,7 +34,7 @@ project/
 ├── .env # Variáveis de ambiente (não subir para o Git)
 └── README.md
 
-
+```
 
 ---
 
